@@ -1,0 +1,80 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace fx
+{
+    class Program
+    {
+        //programme to perform mathematical operations on two numbers given by user using functions
+   
+        static void Main(string[] args)
+        {
+            int a, b,sum,dif,pro;
+            float divi;
+
+            Console.Write("enter first number: ");
+            a = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            Console.Write("enter second number: ");
+            b = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            sum = add(a,b);
+            Console.WriteLine("sum of the two numbers is: "+sum);
+
+            dif = sub(a, b);
+            Console.WriteLine("difference of the two numbers is: " +dif);
+
+            pro = mul(a, b);
+            Console.WriteLine("product of the two numbers is: " +pro);
+
+            divi=div(a, b);
+            Console.WriteLine("after dividing two numbers: " + divi);
+
+
+
+            Console.ReadLine();
+
+        }
+
+        private static int add(int x, int y)
+        {
+            int z;
+
+            z = x + y;
+            return z;
+
+        }
+
+        private static int sub(int x, int y)
+        {
+            int z;
+
+            z = x - y;
+            return z;
+
+        }
+
+        private static int mul(int x, int y)
+        {
+            int z;
+
+            z = x * y;
+            return z;
+
+        }
+
+        private static int div(int x, int y)
+        {
+            int z;
+
+            z = x / y;
+            return z;
+
+        }
+    }
+}
