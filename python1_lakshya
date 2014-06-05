@@ -1,0 +1,84 @@
+# in python we don't need to declare the type of a variable before using it. 
+# every variable in python is object
+
+# print "hello world";              #this prints the string "hello world" (without quote)
+
+import sys;
+import math;
+
+int1 =7;
+int2 =7.0;
+string1 = "python tutorial";        #we can write string in single quote also but the benefit of using double quote is we can use apostrophes
+int3 = 3;
+int4 = 4;
+int5 = int3 + int4 ;    
+print int5;							#3+4 
+
+str1 = "hello";
+str2 = "world";
+str3 = str1+" "+str2;   #hello world
+
+print str3;
+ 
+
+str4 = """this is a new type of quotation .. in this we can
+write multiple lines ."""
+
+print str4;
+
+#example of taking input from user
+#raw_input();
+
+#print some display line with it 
+x = raw_input("enter anything and press ENTER to come out : ");
+
+sys.stdout.write(x + "\n");
+
+print str4[2:6];
+
+
+list = [1,2,3,4,5,"123"]
+newlist = ["456",10]
+
+print list;
+print list[2];
+print list[2:5];
+print list+newlist;
+
+
+#differnce bw tuple and list is that tuple is enclose in "(" and list is enclosed in "[" 
+#another differnce is that tuple can not be updated later while list can be. We can consider tuple as read-only list
+
+tuple = ("abcd", 1,2,3.4);
+newtuple = ("yum",1.0,10);
+
+print tuple;
+print tuple[0];
+print tuple[1:4]            
+print tuple+newtuple;
+
+list[2] = 10000; #valis with list but tuple[2] = 10000 is invalid
+
+if(2 in list):
+	print "2 is available in list";
+else:
+	print "2 is not available in list";
+ 
+count =0;
+while(count !=9):
+	print count;
+	count+=1;
+
+for letter in "python" :
+	print letter;
+
+
+int1 = -3;
+print abs(int1);
+
+int1 = math.sqrt(3);
+print int1;
+
+print math.pi;
+
+print "my name is %s and my age is %d"%("lakshya",20);
