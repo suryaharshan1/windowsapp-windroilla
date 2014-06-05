@@ -1,0 +1,45 @@
+def add(num1,num2):
+    c=0
+    c=num1+num2
+    print ("sum of numbers is %s") %c
+
+def sub(num1,num2):
+    d=0
+    d=num1-num2
+    print ("difference of numbers is %s") %d
+
+def mul(num1,num2):
+    e=0
+    e=num1*num2
+    print ("product of two numbers is %s") %e
+
+def div(num1,num2):
+    f=0.0
+    f=num1/num2
+    print ("after division we get %2f") %f
+
+
+num1 = input("enter first number: ")
+num2 = input("enter second number: ")
+op = input("enter operation: ")
+
+if op == 1:
+   print "you choose addition!"
+   add(num1,num2)
+
+elif op == 2:
+   print "you choose substraction!"
+   sub(num1,num2)
+
+elif op == 3:
+   print "you choose multiplication!"
+   mul(num1,num2)
+
+elif op == 4:
+   print "you choose division! "
+   div(num1,num2)
+
+else:
+  print "enter correct choice!" 
+
+
