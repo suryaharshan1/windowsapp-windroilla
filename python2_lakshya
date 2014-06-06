@@ -1,0 +1,135 @@
+import sys;
+import math;
+
+l1 = [1,2,3,4,5];
+l2 = [6,7,8,9,10];
+l3 = ["abc","def","ghi"];
+
+print cmp(l1,l2);
+print cmp(l1,l1);
+
+print len(l1);
+
+print max(l1);
+print max(l3);
+
+l4 = list((1,11,22));
+print l4; 
+
+l1.append(l2);
+
+print l1;
+
+print l1.count(10);
+print l1.count(1);
+
+l1.insert(2,1000);
+print l1;
+
+l1.reverse();
+
+print l1;
+
+l1.sort();
+print l1;
+
+
+def fib(n):
+	a,b=0,1;
+	while(a<n):
+		print a;
+		a,b = b,a+b;
+
+
+print fib(100);
+
+
+#using a list calling fib 
+
+def fib1(n):
+	a,b=0,1;
+	result = [];
+	while(a<n):
+		result.append(a);
+		a,b = b,a+b;
+	
+	return result;
+
+print fib1(100);
+
+
+i = 10;
+
+def f1(arg = i):
+	print arg;
+
+i = 11;
+print f1();
+
+
+#arbitrary argument list
+
+def arb_fun(sep,*arr):
+	print sep.join(arr);
+
+q1= arb_fun("+","1","2","3","4","5");
+print q1;
+#use of lambda expression
+
+def multiply_42(n):
+	return lambda x: x*n
+
+a1 =multiply_42(42) ;
+print a1(3);
+
+#use list as queue
+
+from collections import deque;
+q = deque([1,2,3]);
+q.append(4);
+q.append(5);
+print q;
+print q.popleft();
+print q;
+
+#here are some good programming tools as the use of functions filter(),map(),reduce();
+
+def f(x): return x%2!=0 and x%3!=0;
+
+print filter(f,range(1,100));
+
+def cube(x): return x*x*x;
+print map(cube,range(1,10));
+
+def add(x,y) : return x+y;
+print reduce(add,range(1,10));
+
+print sum(range(1,11)); #inbuilt function sum
+
+print [(x,y) for x in [1,2,3] for y in [10,1,12] if(x!=y)]
+
+a = set('abadebs');
+b = set('nvfjiosnoinaksnoWNOINANALNdsnjnsvjnvjn');
+print a-b;
+print a|b;
+print a&b;
+print a^b;
+
+
+for i,v in enumerate([1,2,3,4,5,6]):
+	print i,v;
+print "-"*20;
+for i,v in zip([1,2,3,4,5],[6,7,8,9]):
+	print i,v;
+print "-"*20;
+
+for i in reversed(range (1,10,2)):
+	print i;
+print "-"*20;
+for i in sorted(['lakshya','abhishek','harsha','satya']):
+	print i;
+print "-" *20;
+
+for i,v in {'abc':'def','ghi':'jkl','mno':'pqr'}.iteritems():
+	print i,v;
+
