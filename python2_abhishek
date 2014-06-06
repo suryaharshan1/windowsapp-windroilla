@@ -1,0 +1,99 @@
+"""#operations in string
+
+new_string = "Abhishek"
+print new_string #prints the string stored in new_string
+
+new_string = "Abhishek" + " Anand"
+print new_string #concatenates two strings
+
+print new_string[2] #to get a desired index of the string
+
+print new_string[2:8] #traversal in an string from one index to another
+
+print len(new_string)
+print new_string.upper()  #different functions
+print new_string.lower()
+
+print new_string[-11]  #reverse traversal"""
+
+
+
+"""import math
+print math.sqrt(5)"""
+
+"""from math import sqrt
+print sqrt(5)"""
+
+"""#some built in functions
+
+list=[1,5,2,8,3,9,23,-1,-2]
+
+print max(list)
+print min(list)
+print abs(list[7])
+print type(list)
+
+def which(number):
+    if type(number)==int:
+       return "it is a integer"
+
+    elif type(number)==float:
+       return "it is a float value"
+
+    else:
+       return "not on number line"
+
+number=input("enter anything: ")
+print which(number)"""
+
+
+
+"""def fibonacchi(number): #prints fibonacchi series till that number
+    a=0
+    b=1
+
+    while b < number:
+      print b
+      a=b
+      b=a+b
+
+number=input("enter any number ")
+
+if number <= 1000:
+   print fibonacchi(number)
+
+elif number>1000:
+  print "number too big"
+
+elif number <= 1:
+  print "negative not allowed"
+
+else:
+ print "wrong input"""
+
+
+
+list=[67,89,23,25,67,2,7]
+ 
+list.append(8)
+print list
+
+print list.pop()
+print list
+
+list.reverse()
+print list
+list.sort()
+print list
+
+def trim(ele):
+    return ele%3 !=0 and ele%5 !=0
+
+print filter(trim,range(2,100))
+
+def cube(x):
+    return x**3
+
+print map(cube,range(1,100))
+
+print sum(range(1,10))
