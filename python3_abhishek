@@ -1,0 +1,103 @@
+import math
+
+course=['maths','physics','chemistry','biology','english']
+subject=set(course)
+
+print subject
+
+print 'chemistry' in subject
+
+print 'hindi' in subject
+
+one=set('avarakadvra')
+two=set('expalliamus')
+
+print one #unique letters in set one
+
+print one-two
+print one|two
+print one&two
+print one^two
+
+roll={'abhishek':405,'lakshya':476,'pathan':700}
+roll['adi']=329
+
+print roll
+
+print roll['abhishek']
+print roll.keys()
+
+def fib(ele):
+   a=0
+   b=1
+   
+   while b<ele:
+    print b
+    a=b
+    b=a+b
+
+
+"""import fibo
+
+print fibo.fib(100)"""
+
+"""from fibo import fib
+print fib(100)"""
+
+wrd = 'abhishek'
+print str(wrd)
+print  repr(wrd)
+
+for x in range(1,6):
+  print '{0:2d} {1:3d} {2:4d}'.format(x,x+1,x+2)
+
+import math
+
+wrd="13"
+print wrd.zfill(5)
+
+pie=math.pi
+print pie
+print '3.14'.zfill(7)
+
+
+elem ='shaktimaan shaktimaan shakti shati shaktimaan'.center(100)
+elem1 = 'adbhut adamya taakat ki paribhasa hai'.rjust(100)
+elem2 = 'yeh bhagwaan nahi hai yeh insaan hai'.ljust(-100)
+
+print elem
+print elem1
+print elem2
+
+
+print "bade {} lagte hai ye {} aur parwat".format("aache","nadiyaan")
+print "A {0} always pays his {1}".format("Lannister","debts")
+print "{1} is {0}".format("coming","winter")
+
+import math
+
+print "sine pi/2 is {}".format(math.sin(math.pi/2))
+
+roll_list = {'abhishek':405,'lakshya':476,'pathan':700}
+
+for name,roll in roll_list.items():
+    print "{0}::{1}".format(name,roll)
+
+f=open('newfile.txt','r+')
+print f
+
+f.write('yes! i\'m a fan')
+
+print f.seek(5)
+print f.read(13)
+f.close
+
+def try_out():
+   while True:
+     try:
+       x=int(raw_input("enter a number: "))
+       break
+     except ValueError:
+       print "it seems there ia a problem"
+
+print try_out()
