@@ -1,0 +1,75 @@
+def fib1(n):
+	a,b=0,1;
+	while(b<n):
+		print b;
+		a,b=b,a+b;
+
+
+def fib2(n):
+	res = [];
+	a,b=0,1;
+	while(b<n):
+		res.append(b);
+		a,b=b,a+b;
+	return res;
+
+#there are some methods for fancier output writing
+
+#file I/O 
+
+#def thisfails():
+#	return 1/0;
+
+#try:
+#	thisfails();
+#except ZeroDivisionError as e:
+#	print e;
+
+try:
+	f = open("name.txt","r");
+	
+except IOError as e:
+	print "IO Error ({0}) : {1}".format(e.errno,e.strerror);
+	print e;
+
+class ZeroError(Exception):
+	def __init__ (self,msg):
+		self.msg = msg;
+	def __str__(self):
+		return self.msg;
+
+def divide(x,y):
+	try:
+		if(y == 0):
+			raise ZeroError("wrong input");
+		result=x/y;
+	except ZeroError as e:
+		print e.msg;
+	else:
+		print result;
+	finally:
+		print "out of the function";
+
+divide(1,2);
+
+divide(1,0);
+
+class MyClass:
+	counter =1;
+	def __init__(self,name,sirname):
+		self.n=name;
+		self.s = sirname;
+	def f(self):
+		print "hello world";
+
+x = MyClass("lakshya","garg");
+print x.n,x.s;
+
+x.couter =1;
+while x.counter < 10:
+	x.counter = x.counter*2;
+print x.counter;
+del x.counter;
+
+xf = x.f;
+print xf();
