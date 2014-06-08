@@ -1,0 +1,47 @@
+print sum(i*i for i in range(10));
+
+xvec = [1,2,3];
+yvec = [4,5,6];
+print sum(i*j for i,j in zip(xvec,yvec));
+
+from math import pi,sin;
+
+sin_t = dict((x,sin(x*pi/180)) for x in range (0,91));
+print sin_t;
+
+import os;
+print os.getcwd();
+
+os.system("mkdir tmrw");
+os.chdir('/home/lakshya/');
+print os.getcwd();
+
+print dir(os);
+
+#help(os);
+
+import shutil;
+shutil.copyfile("/home/lakshya/Desktop/python/day3.py","/home/lakshya/Desktop/python/new.txt");
+
+import glob;
+print glob.glob("/home/lakshya/Desktop/python/*.py");
+
+
+import sys;
+print sys.argv;
+
+str = "tea for two";
+str1=str.replace("t","tt");
+print str1;
+
+import random;
+print random.randrange(2);
+
+
+from datetime import date;
+day  = date.today();
+print day;
+
+bday = date(1994,04,12);
+age = day-bday;
+print age.days;
