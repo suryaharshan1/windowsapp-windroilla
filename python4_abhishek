@@ -1,0 +1,70 @@
+import math
+#import 
+
+class first:
+  roll=405
+
+  def name(self):
+    return "Abhishek Anand"
+
+print first.roll
+#print first.name()
+
+class full_name:
+   def __init__(self,first,last):
+       self.f = first
+       self.l = last
+
+name=full_name('abhishek','anand')
+print name.f,name.l
+
+
+import os
+print os.getcwd()
+
+#print dir(os)
+#print help(os)
+
+"""import shutil
+shutil.copyfile('data.db','archive.db')"""
+
+import sys
+print sys.argv
+
+import re
+
+print re.findall(r'\b[a-m]',"which foot or amd hand fell faster")
+#this gives the first letter of all the words which start in given range
+
+str="ram is a good boy with a good cow "
+
+match = re.search(r'boy',str)
+match=re.search(r'\w\w\w',str)#\w is for a character it means its for any 3 letter word
+match=re.search(r'..y',str)#. stands for anythin it means three letter word ending eith a y
+  
+if match:
+   print "Found:",match.group()
+else:
+   print "Match not found"
+
+str="ram is a good boy"
+print str.replace("good",'bad')
+
+import random
+
+x=random.randrange(100)
+print x
+
+from datetime import date
+
+now=date.today()
+print now
+
+print date.today().day
+print now.day,now.month,now.year
+
+last_date=date(2014,06,12)
+duration=last_date-now
+ 
+print duration
+print duration.days
