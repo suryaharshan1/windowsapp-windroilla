@@ -1,0 +1,120 @@
+#	from Tkinter import *;
+
+#	main = Tk();
+
+#	L1 = Label(main,text = "User Name");
+#	L1.pack(side = LEFT)
+#	E1 = Entry(main,bd = 5)
+#	E1.pack(side = RIGHT)
+
+#	main.mainloop();
+
+
+"""from Tkinter import *;
+root = Tk();
+frame = Frame(root);
+frame.pack();
+
+bframe = Frame(root);
+bframe.pack(side = BOTTOM);
+
+rb = Button(frame,text = "red", fg="red");
+rb.pack(side = LEFT);
+
+gb = Button(frame,text = "green", fg = "green");
+gb.pack(side = LEFT);
+
+bb = Button(frame,text = "blue", fg = "blue");
+bb.pack(side = LEFT);
+
+blb = Button(bframe,text = "black",fg = "black");
+blb.pack();
+
+root.mainloop();"""
+
+"""from Tkinter import *
+
+root = Tk();
+
+var =raw_input("enter something");
+label = Label( root, text=var, relief=RAISED )
+label.pack()
+root.mainloop()  from Tkinter import *
+
+root = Tk()
+
+var = StringVar()
+label = Label( root, textvariable=var, relief=RAISED )
+
+var.set("Hey!? How are you doing?")
+label.pack()
+root.mainloop()"""
+
+
+"""from Tkinter import *;
+def donothing():
+   filewin = Toplevel(root)
+   button = Button(filewin, text="Do nothing button")
+   button.pack()
+   
+root = Tk()
+menubar = Menu(root)
+filemenu = Menu(menubar, tearoff=0)
+filemenu.add_command(label="New", command=donothing)
+filemenu.add_command(label="Open", command=donothing)
+filemenu.add_command(label="Save", command=donothing)
+filemenu.add_command(label="Save as...", command=donothing)
+filemenu.add_command(label="Close", command=donothing)
+
+filemenu.add_separator()
+
+filemenu.add_command(label="Exit", command=root.quit)
+menubar.add_cascade(label="File", menu=filemenu)
+editmenu = Menu(menubar, tearoff=0)
+editmenu.add_command(label="Undo", command=donothing)
+
+editmenu.add_separator()
+
+editmenu.add_command(label="Cut", command=donothing)
+editmenu.add_command(label="Copy", command=donothing)
+editmenu.add_command(label="Paste", command=donothing)
+editmenu.add_command(label="Delete", command=donothing)
+editmenu.add_command(label="Select All", command=donothing)
+
+menubar.add_cascade(label="Edit", menu=editmenu)
+helpmenu = Menu(menubar, tearoff=0)
+helpmenu.add_command(label="Help Index", command=donothing)
+helpmenu.add_command(label="About...", command=donothing)
+menubar.add_cascade(label="Help", menu=helpmenu)
+
+root.config(menu=menubar)
+root.mainloop()"""
+
+
+"""from Tkinter import *
+
+master = Tk()
+
+w = Spinbox(master, from_=0, to=10)
+w.pack()
+
+mainloop()"""
+
+from Tkinter import *
+
+m1 = PanedWindow()
+m1.pack(fill=BOTH, expand=1)
+
+left = Label(m1, text="left pane")
+m1.add(left)
+
+m2 = PanedWindow(m1, orient=VERTICAL)
+m1.add(m2)
+
+top = Label(m2, text="top pane")
+m2.add(top)
+
+bottom = Label(m2, text="bottom pane")
+m2.add(bottom)
+
+mainloop()
